@@ -1,0 +1,27 @@
+nav {
+  box-shadow: -1px 1px 5px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {
+  #navbarSupportedContent {
+    position: relative;
+  }
+  #navbarSupportedContent>ul {
+    position: absolute;
+    right: 0;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}

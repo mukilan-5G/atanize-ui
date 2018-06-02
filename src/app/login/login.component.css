@@ -1,0 +1,40 @@
+.row {
+  height: 100%;
+}
+
+.row>.col-4 {
+  outline: 10px solid lightslategrey;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  background: black;
+  color: #fff;
+  padding: 5px;
+  box-sizing: border-box;
+  display: none;
+}
+
+.title>h4 {
+  margin: 0;
+  font-weight: bolder;
+}
+
+.content>.row {
+  margin: 0;
+}
+
+.content>.row>.input {
+  text-align: center;
+  line-height: 2.4;
+  padding: 0;
+}
+
+.content>.row>.input>.form-control {
+  border-radius: 0;
+}
+
+.action>button {
+  border-radius: 0;
+}

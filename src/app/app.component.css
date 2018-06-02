@@ -1,0 +1,69 @@
+.container-fluid {
+  background: aliceblue;
+  height: 100%;
+}
+
+.center {
+  display: flex;
+  height: 100%;
+}
+
+.center>.sidemenu {
+  background: grey;
+  box-shadow: 2px -1px 1px;
+}
+
+.center>.content {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.center>.sidemenu .icons,
+.menus {
+  padding: 15px;
+  color: #ffffff;
+  box-sizing: 15px;
+}
+
+.center>.sidemenu .icons {
+  text-align: center;
+}
+
+.center>.sidemenu tr {
+  background: grey;
+  border-bottom: 1px solid;
+}
+
+.center>.sidemenu tr.selected {
+  background: #0C0909;
+}
+
+.center>.sidemenu tr:hover {
+  box-shadow: 5px 1px 10px;
+  cursor: pointer;
+}
+
+.center>.sidemenu .menus {
+  display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {}
+
+.header {
+  background: ghostwhite;
+}
