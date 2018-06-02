@@ -1,11 +1,14 @@
 .container-fluid {
-  background: aliceblue;
   height: 100%;
+  padding:0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .center {
   display: flex;
-  height: 100%;
+  flex: 1;
 }
 
 .center>.sidemenu {
@@ -44,9 +47,9 @@
   cursor: pointer;
 }
 
-.center>.sidemenu .menus {
+/* .center>.sidemenu .menus {
   display: none;
-}
+} */
 
 /* Small devices (landscape phones, 576px and up) */
 

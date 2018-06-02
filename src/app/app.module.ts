@@ -47,13 +47,57 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { HeaderComponent } from './header/header.component';
+import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import { ReviewComponent } from './review/review.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'attendance', component: AttendanceComponent }
+  { path: 'attendance', component: AttendanceComponent },
+  { path: 'employee/register', component: EmployeeRegisterComponent },
+  { path: 'employee/detail', component: EmployeeDetailComponent },
+  { path: 'review', component: ReviewComponent }
 ];
 
 @NgModule({
+  imports: [
+    CdkTableModule,
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+  ],
   exports: [
     CdkTableModule,
     MatAutocompleteModule,
@@ -91,7 +135,8 @@ const appRoutes: Routes = [
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-  ]
+  ],
+  declarations: [EmployeeRegisterComponent, EmployeeDetailComponent, ReviewComponent]
 }) export class MaterialModule { };
 
 @NgModule({
