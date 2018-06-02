@@ -1,5 +1,13 @@
 # AtanizeUi
 
+## Dependencies
+
+nodejs - v10.2.1
+npm - 6.1.0
+angular cli - 6.0.5
+
+## Angular CLI
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
 ## Development server
