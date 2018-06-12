@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CdkTableModule } from '@angular/cdk/table';
 import {
@@ -147,6 +148,9 @@ const appRoutes: Routes = [
     HeaderComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     MaterialModule,
     RouterModule.forRoot(
       appRoutes,

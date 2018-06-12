@@ -6,14 +6,14 @@
     <div class="content">
       <div class="row">
         <div class="input col-lg-6 col-sm-12">
-          <input id="username" class="form-control" placeholder="Username" type="text" ng-model="">
+          <input id="username" class="form-control" placeholder="Username" type="text" [(ngModel)]="username" required>
         </div>
         <div class="input col-lg-6 col-sm-12">
-          <input id="password" class="form-control" placeholder="Password" type="password" ng-model="">
+          <input id="password" class="form-control" placeholder="Password" type="password" [(ngModel)]="password" required>
         </div>
       </div>
     </div>
     <div class="action">
-      <button class="btn btn-primary btn-block">Login</button>
+      <button class="btn btn-primary btn-block" (click)="login()">Login</button>
     </div>
   </div>

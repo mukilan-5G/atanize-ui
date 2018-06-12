@@ -9,7 +9,7 @@
     <div class="sidemenu">
       <table class="">
         <tbody>
-          <tr [ngClass]="router.url=='/attendance'?'selected': ''">
+          <tr routerLink="/attendance" [ngClass]="router.url=='/attendance'?'selected': ''">
             <td class="icons">
               <a>
                 <i class="fas fa-calendar-check"></i>
@@ -19,7 +19,7 @@
               <b>Daily Attendance</b>
             </td>
           </tr>
-          <tr [ngClass]="router.url=='/employee/register' ? 'selected': ''">
+          <tr routerLink="/employee/register" [ngClass]="router.url=='/employee/register' ? 'selected': ''">
             <td class="icons">
               <a>
                   <i class="fas fa-users"></i>
@@ -29,7 +29,7 @@
               <b>Employee Registration</b>
             </td>
           </tr>
-          <tr [ngClass]="router.url=='/employee/detail' ? 'selected': ''">
+          <tr routerLink="/employee/detail" [ngClass]="router.url=='/employee/detail' ? 'selected': ''">
             <td class="icons">
               <a>
                   <i class="fas fa-address-card"></i>
@@ -39,7 +39,7 @@
               <b>Employee Detail</b>
             </td>
           </tr>
-          <tr [ngClass]="router.url=='/review' ? 'selected': ''">
+          <tr routerLink="/review" [ngClass]="router.url=='/review' ? 'selected': ''">
             <td class="icons">
               <a>
                   <i class="fas fa-user-check"></i>

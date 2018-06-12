@@ -1,6 +1,10 @@
 .container-fluid {
   height: 100%;
-  padding:0;
+  background: grey;
+}
+
+.layout {
+  padding: 0;
   background: #fff;
   display: flex;
   flex-direction: column;
