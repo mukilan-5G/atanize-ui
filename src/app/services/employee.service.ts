@@ -28,4 +28,12 @@ export class EmployeeService {
     return this.http.get(this.config.HOST + "api/work_types");
   }
 
+  getAttendance(date, type_of_work) {
+    return this.http.get(this.config.HOST + "api/attendance/" + date + "/" + type_of_work + "/");
+  }
+
+  saveAttendance(date, type_of_work, data) {
+    return this.http.post(this.config.HOST + "api/attendance/" + date + "/" + type_of_work + "/", data);
+  }
+
 }
