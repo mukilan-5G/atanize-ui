@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { MatSort, MatPaginator, MatTableDataSource } from '@angular/material';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { WorkTypes } from 'src/app/interfaces/work-types';
@@ -23,7 +23,7 @@ export class AttendanceComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
@@ -36,12 +36,15 @@ export class AttendanceComponent implements OnInit {
   }
 
   getEmployees() {
+    this.employees = [];
     employeeAttendance = [];
     this.employeeService.getEmployees(this.selectedWorkType).subscribe((data: Employee[]) => {
       this.employees = data;
       this.employees.forEach(employee => {
         employeeAttendance.push(this.addEmployeeAttendance(employee));
       });
+      this.dataSource = new MatTableDataSource<EmployeeAttendance>(employeeAttendance);
+      this.changeDetectorRef.detectChanges();
     });
   }
 
