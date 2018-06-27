@@ -16,6 +16,7 @@ import { LOCALE_ID } from '@angular/core';
 export class AttendanceComponent implements OnInit {
 
   date = new Date();
+  currentDate = new Date();
   selectedWorkType: String = "0";
   workTypes: WorkTypes[];
 
@@ -59,6 +60,7 @@ export class AttendanceComponent implements OnInit {
   }
 
   applyFilter(filterValue: string) {
+    alert(filterValue);
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;

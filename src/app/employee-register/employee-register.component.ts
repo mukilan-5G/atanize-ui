@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/services/employee.service';
+import { ChangeDetectorRef } from '@angular/core';
+import { WorkTypes } from 'src/app/interfaces/work-types';
 
 @Component({
   selector: 'app-employee-register',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeRegisterComponent implements OnInit {
 
-  constructor() { }
+  formData = {
+
+  };
+  workTypes: WorkTypes[];
+  selectedWorkType: String = '0';
+
+  constructor(private employeeService: EmployeeService, private changeDetectorRef: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.getWorkTypes();
+  }
+
+  getWorkTypes() {
+    this.employeeService.getWorkTypes().subscribe((data: WorkTypes[]) => {
+      this.workTypes = data;
+    });
   }
 
 }
