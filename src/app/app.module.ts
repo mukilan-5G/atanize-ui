@@ -51,6 +51,7 @@ import { HeaderComponent } from './header/header.component';
 import { EmployeeRegisterComponent } from './employee-register/employee-register.component';
 import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 import { ReviewComponent } from './review/review.component';
+import { ConfigService } from 'src/app/services/config.service';
 
 const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -137,7 +138,7 @@ const appRoutes: Routes = [
     MatTooltipModule,
     MatTreeModule,
   ],
-  declarations: [EmployeeRegisterComponent, EmployeeDetailComponent, ReviewComponent]
+  declarations: []
 }) export class MaterialModule { };
 
 @NgModule({
@@ -145,7 +146,10 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     AttendanceComponent,
-    HeaderComponent
+    HeaderComponent,
+    EmployeeRegisterComponent,
+    EmployeeDetailComponent,
+    ReviewComponent
   ],
   imports: [
     FormsModule,
@@ -162,4 +166,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

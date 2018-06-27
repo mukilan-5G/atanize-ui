@@ -1,33 +1,32 @@
 <div class="example-container">
   <mat-form-field appearance="outline">
+    <mat-hint *ngIf="error !== undefined && isError('name')"> *&nbsp;{{ error.name[0] }} </mat-hint>
     <mat-label>Name</mat-label>
-    <input matInput>
-    <mat-hint></mat-hint>
+    <input matInput [(ngModel)]="formData.name">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
+    <mat-hint *ngIf="error !== undefined && isError('type_of_work')"> {{ error.type_of_work[0] }} </mat-hint>
     <mat-label>Type of work</mat-label>
-    <mat-select [(ngModel)]="selectedWorkType">
-      <mat-option value="0">All</mat-option>
-      <mat-option *ngFor="let type of workTypes" [value]="type.id">{{ type.type }}</mat-option>
+    <mat-select [(ngModel)]="formData.type_of_work">
+      <mat-option *ngFor="let type of workTypes" [value]="type.id">*&nbsp;{{ type.type }}</mat-option>
     </mat-select>
-    <mat-hint></mat-hint>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
+    <mat-hint *ngIf="error !== undefined && isError('phone_no')"> *&nbsp;{{ error.phone_no[0] }} </mat-hint>
     <mat-label>Mobile No</mat-label>
-    <input matInput type="number">
-    <mat-hint></mat-hint>
+    <input matInput type="number" [(ngModel)]="formData.phone_no">
   </mat-form-field>
 
   <mat-form-field appearance="outline">
+    <mat-hint *ngIf="error !== undefined && isError('address')"> *&nbsp;{{ error.address[0] }} </mat-hint>
     <mat-label>Address</mat-label>
-    <textarea matInput matTextareaAutosize matAutosizeMinRows="8"></textarea>
-    <mat-hint></mat-hint>
+    <textarea matInput matTextareaAutosize matAutosizeMinRows="8" [(ngModel)]="formData.address"></textarea>
   </mat-form-field>
 
 </div>
 <div class="button-row">
-  <button mat-raised-button color="primary">Save</button>
+  <button mat-raised-button color="primary" (click)="registerEmployee()">Save</button>
   <button mat-raised-button>Cancel</button>
 </div>

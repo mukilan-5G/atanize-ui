@@ -13,7 +13,6 @@ export class EmployeeService {
   constructor(private http: HttpClient, private configService: ConfigService) {
     this.configService.getConfig().subscribe((data: Config) => {
       this.config = data;
-      console.log(this.config);
     });
   }
 
@@ -24,7 +23,6 @@ export class EmployeeService {
   }
 
   getWorkTypes() {
-    console.log(this.config);
     return this.http.get(this.config.HOST + "api/work_types");
   }
 
@@ -34,6 +32,10 @@ export class EmployeeService {
 
   saveAttendance(date, type_of_work, data) {
     return this.http.post(this.config.HOST + "api/attendance/" + date + "/" + type_of_work + "/", data);
+  }
+
+  registerEmployee(employee) {
+    return this.http.post(this.config.HOST + "api/employees/", employee);
   }
 
 }

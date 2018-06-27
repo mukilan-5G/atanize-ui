@@ -17,7 +17,6 @@ export class LoginService {
   }
 
   getAuthToken(username, password) {
-    console.log(this.config.HOST);
     return this.http.post(this.config.HOST + "api-token-auth/", {
       username: username,
       password: password
